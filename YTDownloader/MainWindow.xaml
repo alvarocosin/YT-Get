@@ -18,7 +18,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Button x:Name="Exit" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Margin="3" Tag="IsCloseButton" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-            <TextBox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="250"/>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBox MinWidth="250" Height="30" Margin="50"/>
+                <Button Height="50" Width="200"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Window>
