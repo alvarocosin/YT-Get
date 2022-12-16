@@ -39,7 +39,11 @@ namespace YTDownloader
         }
         private void Download_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD.exe", "/C python ytmp3downloader.py " + linkText.Text + " " + destPath.Text);
+            string type = cbType.Text;
+            string ext = cbExtension.Text;
+            type = type.ToLower();
+            ext = "." + ext.ToLower();
+            System.Diagnostics.Process.Start("CMD.exe", "/C python ytmp3downloader.py " + type + " " + linkText.Text + " " + ext + " " + destPath.Text);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

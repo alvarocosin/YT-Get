@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         WindowStyle="None" 
         AllowsTransparency="True"
-        Title="MainWindow" Height="410" Width="500">
+        Title="MainWindow" Height="540" Width="500">
     <Border CornerRadius="8" BorderThickness="0.5" BorderBrush="Gray" Background="#FFFFFF">
         <Grid>
             <Grid.RowDefinitions>
@@ -20,6 +20,14 @@
             <Button x:Name="Exit" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Margin="3" Tag="IsCloseButton" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Exit_Click"/>
             <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 35">
                 <TextBlock HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" Text="YouTube to MP3" FontWeight="Bold" FontSize="30" Foreground="#FF534C4C" FontFamily="Arial"/>
+                <ComboBox x:Name="cbType" Width="380" Height="40" Margin="0 30 0 0" FontSize="15" VerticalContentAlignment="Center">
+                    <ComboBoxItem IsSelected="True" Content="VIDEO" />
+                    <ComboBoxItem Content="PLAYLIST"/>
+                </ComboBox>
+                <ComboBox x:Name="cbExtension" Width="380" Height="40" Margin="0 20 0 0" FontSize="15" VerticalContentAlignment="Center">
+                    <ComboBoxItem IsSelected="True" Content="MP3"/>
+                    <ComboBoxItem Content="MP4"/>
+                </ComboBox>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
                     <TextBox x:Name="destPath" Width="320" Padding="10 0 10 0" FontSize="15" VerticalContentAlignment="Center" IsReadOnly="True" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFF6F6F6" Foreground="DarkGray"/>
                     <Button x:Name="SearchPath" Cursor="Hand" Content="..." Width="50" Height="40" FontSize="17" Margin="10 0 0 0" BorderBrush="{x:Null}" Click="SearchPath_Click">
@@ -30,8 +38,8 @@
                         </Button.Resources>
                     </Button>
                 </StackPanel>
-                <TextBox x:Name="linkText" Padding="10 0 10 0" Width="380" FontSize="15" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFF6F6F6" Foreground="DarkGray" Height="40" Margin="40" PreviewMouseDown="ClickLinkBox"/>
-                <Button x:Name="Download" Cursor="Hand" Content="Download" FontSize="20" Height="50" Width="200" Click="Download_Click" BorderBrush="{x:Null}" Background="#FF64CCF1" Foreground="White" FontFamily="Arial">
+                <TextBox x:Name="linkText" Padding="10 0 10 0" Width="380" FontSize="15" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="{x:Null}" Background="#FFF6F6F6" Foreground="DarkGray" Height="40" Margin="0 20 0 0" PreviewMouseDown="ClickLinkBox"/>
+                <Button x:Name="Download" Cursor="Hand" Content="Download" FontSize="20" Height="50" Width="200" Margin="0 40 0 0" Click="Download_Click" BorderBrush="{x:Null}" Background="#FF64CCF1" Foreground="White" FontFamily="Arial">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"></Setter>
