@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         WindowStyle="None" 
         AllowsTransparency="True"
-        Title="MainWindow" Height="540" Width="500">
+        Title="MainWindow" Height="540" Width="480">
     <Border CornerRadius="8" BorderThickness="0.5" BorderBrush="Gray" Background="#FFFFFF">
         <Grid>
             <Grid.RowDefinitions>
