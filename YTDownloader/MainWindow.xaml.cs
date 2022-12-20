@@ -45,7 +45,7 @@ namespace YTDownloader
             string ext = cbExtension.Text;
             type = type.ToLower();
             ext = "." + ext.ToLower();
-            string args = "/C python ../../resources/ytmp3downloader.py " + type + " " + linkText.Text + " " + ext + " " + destPath.Text;
+            string args = "/C python ../../python/ytmp3downloader.py " + type + " " + linkText.Text + " " + ext + " " + destPath.Text;
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.FileName = "CMD.exe";
             startInfo.Arguments = args;

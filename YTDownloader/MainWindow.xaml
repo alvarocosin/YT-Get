@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
             <Button x:Name="Exit" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Margin="3" Tag="IsCloseButton" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Exit_Click"/>
             <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 35">
-                <TextBlock HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" Text="YouTube to MP3" FontWeight="Bold" FontSize="30" Foreground="#FF534C4C" FontFamily="Arial"/>
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="YT-Get" FontWeight="Bold" FontSize="40" Foreground="#FF534C4C" FontFamily="Arial" Margin="15"/>
                 <ComboBox x:Name="cbType" Width="380" Height="40" Margin="0 30 0 0" FontSize="15" VerticalContentAlignment="Center">
                     <ComboBoxItem IsSelected="True" Content="VIDEO" />
                     <ComboBoxItem Content="PLAYLIST"/>
